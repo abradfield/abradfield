@@ -1,4 +1,4 @@
-const build = require("./config/esbuild.defaults.js")
+const build = require("./config/esbuild.defaults.js");
 
 // You can customize this as you wish, perhaps to add new esbuild plugins.
 //
@@ -32,12 +32,13 @@ const build = require("./config/esbuild.defaults.js")
  * @type {BuildOptions}
  */
 const esbuildOptions = {
+  publicPath: "/bridgetown-gh-pages-demo/_bridgetown/static",
   plugins: [
     // add new plugins here...
   ],
   globOptions: {
-    excludeFilter: /\.(dsd|lit)\.css$/
-  }
-}
+    excludeFilter: /\.(dsd|lit)\.css$/,
+  },
+};
 
-build(esbuildOptions)
+build(esbuildOptions);
